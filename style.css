@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  background-color: #ffffff;
+}
 
 /* navbar style  */
 .navbar {
@@ -27,4 +30,63 @@
   text-decoration: none;
   font-weight: 600;
   color: #3a3a3a;
+}
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* hero style  */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .img {
+  width: 100%;
+  background-image: url(./images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding: 55px 20px 55px 10px;
+} */
+
+.bg-img {
+  position: relative;
+  z-index: 1;
+}
+.main-img {
+  position: absolute;
+  z-index: 3;
+}
+
+.content h2 {
+  font-size: 3.25rem;
+  font-weight: 700;
+}
+.btn {
+  background-color: #e02c6d;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 41px;
+  margin-top: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.sponsor {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .navbar,
+  .nav-container,
+  .hero {
+    flex-direction: column;
+  }
+  .hero {
+    flex-direction: column-reverse;
+  }
 }
