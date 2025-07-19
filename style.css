@@ -39,6 +39,7 @@ main {
 /* hero style  */
 
 .hero {
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,13 +52,16 @@ main {
   padding: 55px 20px 55px 10px;
 } */
 
-.bg-img {
+.img {
+  /* width: 100%; */
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .main-img {
   position: absolute;
-  z-index: 3;
+  top: 30px;
+  right: 20px;
+  /* z-index: 3; */
 }
 
 .content h2 {
@@ -73,20 +77,51 @@ main {
   color: white;
   font-weight: 700;
 }
-
+/* sponsor section  */
 .sponsor {
+  max-width: 1050px;
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
   align-items: center;
 }
+.card-section {
+  margin-top: 100px;
+  max-width: 1050px;
+}
+.card-section > h2 {
+  text-align: center;
+  padding: 20px 0px;
+}
+.card-items {
+  width: 329px;
+  height: 476px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-container,
-  .hero {
+  .nav-container {
     flex-direction: column;
+  }
+  .sponsor {
+    flex-wrap: wrap;
+    padding: 20px;
   }
   .hero {
     flex-direction: column-reverse;
+  }
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
